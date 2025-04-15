@@ -4,6 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,9 +14,13 @@
   "description": "",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
-    "mongoose": "^8.13.2"
+    "md5": "^2.3.0",
+    "mongoose": "^8.13.2",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
